@@ -5,8 +5,9 @@
 //cores utilizadas
 $text-menu:#000000;
 $titulo:#000000;
-$sub-titulo:#9C9696;
+$descricao:#9C9696;
 $text-search:#9C9696;
+$text-valor:#000000;
 $text-btn:#FFFFFF;
 
 $bg-cinza-claro:#ECECED;
@@ -20,7 +21,6 @@ $bg-btn:#FF0000;
 .menu{
     //caixa que guarda a icone logo, menu, caixa pesquisa e icone e icone de compras
    
-
     .menu_container{
         display: flex;
         justify-content: space-between;
@@ -45,9 +45,7 @@ $bg-btn:#FF0000;
                     @include tipografia(24,$text-menu,700,0 )
                 }
             }
-
         }
-
 
         .menu_container_search{
             display: flex;
@@ -76,6 +74,45 @@ $bg-btn:#FF0000;
             margin: auto 0;
             cursor: pointer;
            
+        }
+    }
+}
+
+//section 
+
+.containerProduto{
+
+
+    .containerProduto_descricao{
+        @include container(540px,914px,$bg-cinza-claro,103px 72px 0 111px,0,no);
+
+        h1#titulo{
+            @include tipografia(60,$titulo,700,70px);
+        }
+
+        p#descricao{
+            margin:21px 0 44px 0;
+            @include tipografia(16,$descricao,700,19px);
+        }
+
+        p#valor{
+            margin-bottom:30px;
+            @include tipografia(40,$text-valor,700,0 )
+        }
+
+        button#botao{
+            background: $bg-btn;
+            padding:33px 79px 33px 75px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.6s;
+            @include tipografia(24, $text-btn,700,0);
+
+            &:hover{
+                background: darken($bg-btn , 5%);
+            }
+            
         }
     }
 }
