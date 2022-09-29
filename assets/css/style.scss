@@ -1,0 +1,8 @@
+@import "reset";
+@import "mixins";
+
+
+
+.container{
+    @include container(220px, 400px, blue,0,0,flexi) ;
+}

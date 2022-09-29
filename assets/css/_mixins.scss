@@ -1,0 +1,37 @@
+//Tipografia
+@mixin tipografia($size, $color, $weight, $line){ 
+    $em:$size/16 + em; // colocado em pixels convertera em EM 
+    font-family: 'Roboto', 'helvetica',sans-serif;
+    font-size: $em;
+    color: $color;
+    font-weight: $weight;
+
+    //Caso  line-height  seja maior que 0 será atribuida essa propriedade
+    @if($line > 0 ){
+        line-height: $line;
+    }
+}
+
+//altura,largura,background,padding,margin
+@mixin container($width, $height, $bg, $padd , $margin,$flex){
+    width: $width;
+    height: $height;
+    background: $bg;
+
+    //Caso queira adicionar padding será atribuido 
+    @if($padd(0) > 0){ //  maior que ZERO ou O PRIMEIRO valor seja 
+        padding: $padd; // por padrao o default sera  0, para adicionar mais que 1 valor  será EX: 45px 35px 45px 35px sem ","
+
+    }
+    
+    //Caso queira adicionar  margin será atribuido 
+    @if($margin(0) > 0){ //  maior que ZERO ou O PRIMEIRO valor seja 
+        margin: $margin; // por padrao o default sera  0
+    }
+
+    @if($flex  == flexi){//Caso queira ter essas propriedades COLOCAR apenas FLEXI
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
