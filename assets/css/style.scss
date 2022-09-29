@@ -61,7 +61,6 @@ $bg-btn:#FF0000;
                 height: 19px;
                 margin: auto 10px auto 13px;
                 cursor: pointer;
-                
             }
 
             input#inputSearch{
@@ -87,7 +86,6 @@ $bg-btn:#FF0000;
 .containerProduto{
     margin: -89px 0 0 0;
     display: flex;
-
 
     .containerProduto_descricao{                        //padding: de cima,direita,baixo,esquerda
         @include container(540px,914px,$bg-cinza-claro, (103px + 89px) 72px 0 111px  ,0,no);
@@ -131,7 +129,7 @@ $bg-btn:#FF0000;
         }
 
         .containerProduto_fotoProduto_slide{
-            @include container(100%, auto, red, 0 18px 0 18px,0,flexi);
+            @include container(100%, auto, none, 0 18px 0 18px,0,flexi);
             justify-content: space-between !important;
 
 
@@ -175,6 +173,7 @@ $bg-btn:#FF0000;
 
             li{
                 padding: 0 45px 0 45px;
+
                 a{
                     text-decoration: none;
                     @include tipografia(18, $text-footer,700,0);
@@ -182,8 +181,6 @@ $bg-btn:#FF0000;
             }
         }
     }
-
-
 
 
     .containerLinks_externo{
@@ -199,13 +196,5 @@ $bg-btn:#FF0000;
         img#iconSeta{
             cursor:pointer;
         }
-
-
     }
-
-
-
-
-
-
 }
