@@ -81,10 +81,11 @@ $bg-btn:#FF0000;
 //section 
 
 .containerProduto{
+    margin: -89px 0 0 0;
 
 
-    .containerProduto_descricao{
-        @include container(540px,914px,$bg-cinza-claro,103px 72px 0 111px,0,no);
+    .containerProduto_descricao{                        //padding: de cima,direita,baixo,esquerda
+        @include container(540px,914px,$bg-cinza-claro, (103px + 89px) 72px 0 111px  ,0,no);
 
         h1#titulo{
             @include tipografia(60,$titulo,700,70px);

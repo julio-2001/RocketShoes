@@ -64,11 +64,14 @@ body {
   cursor: pointer;
 }
 
+.containerProduto {
+  margin: -89px 0 0 0;
+}
 .containerProduto .containerProduto_descricao {
   width: 540px;
   height: 914px;
   background: #ECECED;
-  padding: 103px 72px 0 111px;
+  padding: 192px 72px 0 111px;
   margin: 0;
 }
 .containerProduto .containerProduto_descricao h1#titulo {
