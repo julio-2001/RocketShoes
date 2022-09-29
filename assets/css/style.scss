@@ -9,6 +9,8 @@ $descricao:#9C9696;
 $text-search:#9C9696;
 $text-valor:#000000;
 $text-btn:#FFFFFF;
+$text-footer:#000000;
+$text-linkExterno:#FFFFFF;
 
 $bg-cinza-claro:#ECECED;
 $bg-cinza-escuro:#C4C4C4;
@@ -101,7 +103,7 @@ $bg-btn:#FF0000;
 
         p#valor{
             margin-bottom:30px;
-            @include tipografia(40,$text-valor,700,0 )
+            @include tipografia(40,$text-valor,700,0 );
         }
 
         button#botao{
@@ -136,19 +138,73 @@ $bg-btn:#FF0000;
             img#imgTenis1{
                 width: 270px;
                 height: 183px;
+                cursor: pointer;
             }
 
             img#imgTenis2{
                 width: 250px;
                 height: 188px;
+                cursor: pointer;
             }
 
             img#imgTenis3{
                 width:270px;
                 height:183px;
+                cursor: pointer;
+               
             }
         }
     }
+}
+
+
+//Footer
+
+.containerLinks{
+    @include container(100%,auto,$bg-cinza-claro,0,0,flexi);
+    justify-content: space-between !important;
+
+    .containerLinks_interno {
+        width: 100%;
+        max-width: 753px;
+
+        ul{
+            list-style: none;
+            display: flex;
+            padding: 0 77px 0 47px;
+
+            li{
+                padding: 0 45px 0 45px;
+                a{
+                    text-decoration: none;
+                    @include tipografia(18, $text-footer,700,0);
+                }
+            }
+        }
+    }
+
+
+
+
+    .containerLinks_externo{
+        @include container(437px, 166px, $bg-black,0,0,flexi);
+
+        a#linkExterno{
+            text-decoration: none;
+            // margin: 0 17px 0 0;
+            padding: 0 17px 0 0;
+            @include tipografia(24,$text-linkExterno,700,28px );
+        }
+
+        img#iconSeta{
+            cursor:pointer;
+        }
+
+
+    }
+
+
+
 
 
 
