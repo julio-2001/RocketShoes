@@ -2,7 +2,80 @@
 @import "mixins";
 
 
+//cores utilizadas
+$text-menu:#000000;
+$titulo:#000000;
+$sub-titulo:#9C9696;
+$text-search:#9C9696;
+$text-btn:#FFFFFF;
 
-.container{
-    @include container(220px, 400px, blue,0,0,flexi) ;
+$bg-cinza-claro:#ECECED;
+$bg-cinza-escuro:#C4C4C4;
+$bg-black:#000000;
+$bg-btn:#FF0000;
+
+
+//menu
+
+.menu{
+    //caixa que guarda a icone logo, menu, caixa pesquisa e icone e icone de compras
+   
+
+    .menu_container{
+        display: flex;
+        justify-content: space-between;
+        @include container(100%, 50px, #eee, 0 60px 0 60px, 39px 0 0 0,no);
+        
+        img#logo{
+            width: 52px;
+            height: 37px;
+            cursor: pointer;
+            
+        }
+
+        ul.menu_container_navbar{
+            display: flex;
+
+            li{
+                list-style: none;
+                padding: 0 45px 0 45px;
+
+                a{
+                    text-decoration: none;
+                    @include tipografia(24,$text-menu,700,0 )
+                }
+            }
+
+        }
+
+
+        .menu_container_search{
+            display: flex;
+            width: 220px;
+            background: #FFFFFF;
+
+            img#iconSearch{
+                width: 19px;
+                height: 19px;
+                margin: auto 10px auto 13px;
+                cursor: pointer;
+                
+            }
+
+            input#inputSearch{
+                background: none;
+                outline: none;
+                border: none;
+                @include tipografia(18,$text-search,400,0);
+            }
+        }
+
+        img#iconCompras{
+            width: 26px;
+            height: 29px;
+            margin: auto 0;
+            cursor: pointer;
+           
+        }
+    }
 }
