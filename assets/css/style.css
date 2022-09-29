@@ -9,12 +9,16 @@ body {
   margin: 0 auto;
 }
 
+.menu {
+  position: relative;
+  z-index: 1;
+}
 .menu .menu_container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 50px;
-  background: #eee;
+  background: none;
   padding: 0 60px 0 60px;
   margin: 39px 0 0 0;
 }
@@ -66,6 +70,7 @@ body {
 
 .containerProduto {
   margin: -89px 0 0 0;
+  display: flex;
 }
 .containerProduto .containerProduto_descricao {
   width: 540px;
@@ -110,4 +115,42 @@ body {
 }
 .containerProduto .containerProduto_descricao button#botao:hover {
   background: #e60000;
+}
+.containerProduto .containerProduto_fotoProduto {
+  flex-direction: column;
+  width: 900px;
+  height: 914px;
+  background: #C4C4C4;
+  padding: 118px 0 0 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerProduto .containerProduto_fotoProduto img#fotoAmpliada {
+  width: 597px;
+  height: 511px;
+}
+.containerProduto .containerProduto_fotoProduto .containerProduto_fotoProduto_slide {
+  width: 100%;
+  height: auto;
+  background: red;
+  padding: 0 18px 0 18px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between !important;
+}
+.containerProduto .containerProduto_fotoProduto .containerProduto_fotoProduto_slide img#imgTenis1 {
+  width: 270px;
+  height: 183px;
+}
+.containerProduto .containerProduto_fotoProduto .containerProduto_fotoProduto_slide img#imgTenis2 {
+  width: 250px;
+  height: 188px;
+}
+.containerProduto .containerProduto_fotoProduto .containerProduto_fotoProduto_slide img#imgTenis3 {
+  width: 270px;
+  height: 183px;
 }/*# sourceMappingURL=style.css.map */

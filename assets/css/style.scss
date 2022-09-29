@@ -20,11 +20,13 @@ $bg-btn:#FF0000;
 
 .menu{
     //caixa que guarda a icone logo, menu, caixa pesquisa e icone e icone de compras
+    position: relative;
+    z-index: 1;
    
     .menu_container{
         display: flex;
         justify-content: space-between;
-        @include container(100%, 50px, #eee, 0 60px 0 60px, 39px 0 0 0,no);
+        @include container(100%, 50px, none, 0 60px 0 60px, 39px 0 0 0,no);
         
         img#logo{
             width: 52px;
@@ -82,6 +84,7 @@ $bg-btn:#FF0000;
 
 .containerProduto{
     margin: -89px 0 0 0;
+    display: flex;
 
 
     .containerProduto_descricao{                        //padding: de cima,direita,baixo,esquerda
@@ -113,7 +116,40 @@ $bg-btn:#FF0000;
             &:hover{
                 background: darken($bg-btn , 5%);
             }
-            
         }
     }
+
+    .containerProduto_fotoProduto{
+        flex-direction: column;
+        @include container(900px, 914px,$bg-cinza-escuro,( 89px + 29px ) 0 0 0 ,0,flexi);
+
+        img#fotoAmpliada{
+            width: 597px;
+            height: 511px;
+        }
+
+        .containerProduto_fotoProduto_slide{
+            @include container(100%, auto, red, 0 18px 0 18px,0,flexi);
+            justify-content: space-between !important;
+
+
+            img#imgTenis1{
+                width: 270px;
+                height: 183px;
+            }
+
+            img#imgTenis2{
+                width: 250px;
+                height: 188px;
+            }
+
+            img#imgTenis3{
+                width:270px;
+                height:183px;
+            }
+        }
+    }
+
+
+
 }

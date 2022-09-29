@@ -29,7 +29,7 @@
         margin: $margin; // por padrao o default sera  0
     }
 
-    @if($flex  == flexi){//Caso queira ter essas propriedades COLOCAR apenas FLEXI
+    @if($flex  == flexi){//Caso queira ter essas propriedades COLOCAR apenas FLEXI, QUALQUER coisa diferente disso não terá essas propriedade
         display: flex;
         justify-content: center;
         align-items: center;
